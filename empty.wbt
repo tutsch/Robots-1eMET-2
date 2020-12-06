@@ -1,0 +1,104 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.009723254080232854 0.9330381075939412 0.35964614290661856 3.074215024470965
+  position 0.015122152675600402 0.5487884000657741 -0.47891793562331286
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+  floorTileSize 1 1
+  wallHeight 0.0001
+}
+TinkerbotsBase {
+  translation 0 0.02 0
+  controller "my_controller"
+  upSlot TinkerbotsCube {
+    name "0"
+    upSlot TinkerbotsCube {
+    }
+    leftSlot TinkerbotsCube {
+      name "randi"
+      leftSlot TinkerbotsMotor {
+        rotation 0 0 1 -1.5707996938995747
+        name "motor5"
+        backSlot TinkerbotsAxle {
+          endSlot TinkerbotsWheel {
+          }
+        }
+      }
+      rightSlot TinkerbotsMotor {
+        rotation 0 0 1 1.5707996938995747
+        name "motor6"
+        backSlot TinkerbotsAxle {
+          endSlot TinkerbotsWheel {
+          }
+        }
+      }
+    }
+    rightSlot TinkerbotsCube {
+      name "randi2"
+      leftSlot TinkerbotsMotor {
+        rotation 0 0 1 1.570795613280012
+        name "motor3"
+        frontSlot TinkerbotsAxle {
+          endSlot TinkerbotsWheel {
+          }
+        }
+      }
+      rightSlot TinkerbotsMotor {
+        rotation 0 0 1 -1.5708003061004252
+        name "motor2"
+        frontSlot TinkerbotsAxle {
+          endSlot TinkerbotsWheel {
+          }
+        }
+      }
+    }
+  }
+  downSlot TinkerbotsCube {
+    name "Down1"
+    leftSlot TinkerbotsCube {
+      name "randi3"
+      rightSlot TinkerbotsMotor {
+        rotation 0 0 1 -1.5707996938995747
+        name "motor1"
+        frontSlot TinkerbotsAxle {
+          endSlot TinkerbotsWheel {
+          }
+        }
+      }
+    }
+    rightSlot TinkerbotsCube {
+      name "randi4"
+      leftSlot TinkerbotsMotor {
+        rotation 0 0 1 -1.570795613280012
+        name "motor4"
+        backSlot TinkerbotsAxle {
+          endSlot TinkerbotsWheel {
+          }
+        }
+      }
+    }
+  }
+  extensionSlot [
+    Lidar {
+      translation -1.85752e-07 0.03 0.07
+      rotation 0 1 0 3.14159
+      name "Lidar"
+      fieldOfView 4
+      numberOfLayers 1
+      minRange 0.08
+      maxRange 2
+    }
+  ]
+}
+Ball {
+  translation 0.238118 0.0425 0.482894
+  radius 0.04
+}
