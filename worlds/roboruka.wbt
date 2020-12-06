@@ -1,0 +1,82 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.1377177889719608 0.9635078891619888 0.2295350912677261 4.176841697984042
+  position -0.03884701329183504 0.30023229296983106 -0.24876485543113344
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  tileSize 0.3 0.3
+}
+Ball {
+  translation 0.259637 0.0225 -0.0826077
+  name "ball(1)"
+  color 0.729412 0.0509804 0.0509804
+  radius 0.02
+}
+Ball {
+  translation 0.215004 0.0225 0.0367172
+  name "ball(2)"
+  color 0.0941176 0.729412 0
+  radius 0.02
+}
+TinkerbotsBase {
+  translation 0.32 0.14 0
+  controller "robo_controller"
+  upSlot TinkerbotsGrabber {
+    fingerASlot TinkerbotsFinger {
+      name "finger A"
+    }
+    fingerBSlot TinkerbotsFinger {
+      name "finger B"
+    }
+    fingerCSlot TinkerbotsFinger {
+      name "finger C"
+    }
+  }
+  downSlot TinkerbotsPivot {
+    slot TinkerbotsCube {
+      name "cebe_next_midl"
+      upSlot TinkerbotsCube {
+        upSlot TinkerbotsCube {
+        }
+      }
+      backSlot TinkerbotsTwister {
+        rotation 0 0 1 1.5707996938995747
+        slot TinkerbotsCube {
+          upSlot TinkerbotsCube {
+            leftSlot TinkerbotsCube {
+            }
+            rightSlot TinkerbotsCube {
+            }
+            frontSlot TinkerbotsCube {
+            }
+            backASlot TinkerbotsAxle {
+            }
+            backDSlot TinkerbotsAxle {
+            }
+          }
+          leftSlot TinkerbotsCube {
+          }
+          rightSlot TinkerbotsCube {
+          }
+          frontSlot TinkerbotsCube {
+          }
+        }
+      }
+    }
+  }
+  extensionSlot [
+    DistanceSensor {
+      translation 6.11772e-08 0 0.06
+      rotation 0 1 0 -1.5707953071795862
+      name "ds"
+      type "infra-red"
+    }
+  ]
+}
