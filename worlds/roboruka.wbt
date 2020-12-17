@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.1377177889719608 0.9635078891619888 0.2295350912677261 4.176841697984042
-  position -0.03884701329183504 0.30023229296983106 -0.24876485543113344
+  orientation 0.2948723631926519 0.8698295989755767 0.39553351080681964 4.199390815009421
+  position -0.19533106744454418 0.5910935055271448 -0.21963044685593
 }
 TexturedBackground {
 }
@@ -14,15 +14,57 @@ Floor {
   tileSize 0.3 0.3
 }
 Ball {
-  translation 0.259637 0.0225 -0.0826077
+  translation 0.0736433 0.0225 0.00430289
   name "ball(1)"
-  color 0.729412 0.0509804 0.0509804
+  color 0.333333 0 0
   radius 0.02
 }
 Ball {
-  translation 0.215004 0.0225 0.0367172
-  name "ball(2)"
+  translation 0.526745 0.022499999999999992 0.0298219
+  name "ball(9)"
+  color 0.333333 0 0
+  radius 0.02
+}
+Ball {
+  translation 0.0199325 0.0225 0.0148737
+  name "ball(10)"
+  color 0.333333 0 0
+  radius 0.02
+}
+Ball {
+  translation 0.439016 0.0225 0.134939
+  name "ball(5)"
   color 0.0941176 0.729412 0
+  radius 0.02
+}
+Ball {
+  translation 0.261665 0.0225 -0.0813578
+  name "ball(4)"
+  color 0.0941176 0.729412 0
+  radius 0.02
+}
+Ball {
+  translation 0.193007 0.0225 -0.185351
+  name "ball(6)"
+  color 0.0941176 0.729412 0
+  radius 0.02
+}
+Ball {
+  translation 0.136536 0.0225 -0.0495243
+  name "ball(3)"
+  color 1 0 0
+  radius 0.02
+}
+Ball {
+  translation 0.143897 0.0225 -0.132883
+  name "ball(7)"
+  color 1 0 0
+  radius 0.02
+}
+Ball {
+  translation 0.325659 0.0225 0.184812
+  name "ball(8)"
+  color 1 0 0
   radius 0.02
 }
 TinkerbotsBase {
@@ -51,6 +93,12 @@ TinkerbotsBase {
         slot TinkerbotsCube {
           upSlot TinkerbotsCube {
             leftSlot TinkerbotsCube {
+              upSlot TinkerbotsCube {
+                backSlot TinkerbotsDistanceSensor {
+                  rotation 0 0 1 -3.141592653589793
+                  name "dist"
+                }
+              }
             }
             rightSlot TinkerbotsCube {
             }
@@ -79,4 +127,19 @@ TinkerbotsBase {
       type "infra-red"
     }
   ]
+}
+PlasticCrate {
+  translation 0.504449 -3.77476e-15 -0.0421441
+  name "plastic crate(1)"
+  size 0.1 0.05 0.1
+}
+PlasticCrate {
+  translation 0.433047 -2.33147e-15 0.0635012
+  name "plastic crate(2)"
+  size 0.1 0.02 0.1
+}
+PlasticCrate {
+  translation 0.326716 -3.21965e-15 0.103378
+  name "plastic crate(3)"
+  size 0.1 0.02 0.1
 }
